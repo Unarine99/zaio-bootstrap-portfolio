@@ -13,9 +13,7 @@
  * Base structure
  */
 
-body {
-  
-}
+
 
 
 
@@ -61,4 +59,10 @@ body {
 .nav-masthead .active {
   color: #fff;
   border-bottom-color: #fff;
+}
+
+.scrolling {
+background: black;
+opacity: 80%;
+transition: all 0.5s;
 }

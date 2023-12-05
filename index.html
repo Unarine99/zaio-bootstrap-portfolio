@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
+    <link rel="icon" href="./assets/favicon.jpg">
     <title>Portfolio | Unarine Sadike</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
@@ -26,25 +27,26 @@
   </head>
   <body class="bg-light">
     
-    <div class="banner-wrap vh-100 vw-100 text-white">
+    <div class="banner-wrap d-flex align-items-center justify-content-center vh-100 vw-100 text-white">
       <div class="overlay"></div>
-      <header class="px-5 p-3 text-white">
+      <header class="px-5 p-2 text-white fixed-top">
         <div>
           <h3 class="float-md-start text-center">Portfolio</h3>
           <nav class="nav nav-masthead justify-content-center float-md-end">
             <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
-            <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
-            <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
+            <a class="nav-link fw-bold py-1 px-0" href="#about">About</a>
+            <a class="nav-link fw-bold py-1 px-0" href="#projects">Projects</a>
+            <a class="nav-link fw-bold py-1 px-0" href="#contact">Contact</a>
           </nav>
         </div>
       </header>
-  <main class="d-flex flex-column align-items-center justify-content-center h-75 text-center">
-    <h1 class="display-1">I am Unarine Sadike.</h1>
-    <p class="lead">Fullstack Developer. Hydrologist.</p>
+  <main class="text-center">
+    <h3 class="display-1">I am Unarine Sadike.</h1>
+    <span class="lead" id="typed"></span>
   </main>
 </div>
 
-<section>
+<section id="about">
     <div class="container p-5">
       <div class="card">
         <div class="card-body">
@@ -85,7 +87,7 @@
     </div>
 </section>
 
-<section>
+<section id="projects">
    <div class="container p-3">
     <h1 class="text-center"><mark> Projects</mark></h1>
     <div class="row">
@@ -102,7 +104,7 @@
     </div>
     <div class="col-md-4 mt-3">
       <div class="card">
-        <img src="https://zaiocontent.s3.eu-west-2.amazonaws.com/images+of+courses/css_netflix.png" class="card-img-top" alt="...">
+        <img src="https://zaiocontent.s3.eu-west-2.amazonaws.com/images+of+courses/Tesla.png" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Tesla Landing Page</h5>
           <p class="card-text">Built this with HTML and CSS.</p>
@@ -113,7 +115,7 @@
   </div>
   <div class="col-md-4 mt-3">
     <div class="card">
-      <img src="https://zaiocontent.s3.eu-west-2.amazonaws.com/images+of+courses/css_netflix.png" class="card-img-top" alt="...">
+      <img src="https://zaiocontent.s3.eu-west-2.amazonaws.com/images+of+courses/html_youtube.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">YouTube Clone Home Page</h5>
         <p class="card-text">Built this with HTML and CSS.</p>
@@ -129,7 +131,7 @@
 
 </section>
  
-<section>
+<section id="contact">
   <div class="container" p-5>
     <div class="card p-3">
       <div class="card-body px-5 text-center">
@@ -138,29 +140,49 @@
         <a class="fs-2" href="https://www.instagram.com/unarine_x/" target="_blank"><i class="bi bi-instagram m-2"></i></a>
         <a class="fs-2" href="https://www.linkedin.com/in/unarine-sadike-45193a152/" target="_blank"><i class="bi bi-linkedin m-2"></i></a>
         <a class="fs-2" href="https://github.com/Unarine99/" target="_blank"><i class="bi bi-github m-2"></i></a>
-      
         <form>
-          <div class="form-floating mb-3">
+          <div class="mb-3">
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email Address">
           </div>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="Enter Name">
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Enter name" id="Enter Name">
           </div>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="Enter Subject">
+          <div class="mb-3">
+            <input type="text" class="form-control" id="Enter Subject" placeholder="Enter subject">
           </div>
-          <div class="form-floating mb-3"></div>
-          <textarea class="form-control" aria-label="With textarea" placeholder="Leave a message here" id="floatingtextarea2"></textarea>
-          <label for="floatingtextarea2">Comments</label>
+          <div class="mb-3">
+          <textarea class="form-control" aria-label="With textarea" placeholder="Comments" row-5 id="floatingtextarea2"></textarea>
+          <label for="floatingtextarea2"></label>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
-
-      
     </div>
   </div>
 </section>
 
+<footer>
+  <div class="container p-2 bg-dark text-center text-white">
+    <p>Developed by Unarine Sadike.</p>
+
+  </div>
+</footer>
+
+<script>
+    window.addEventListener("scroll", () => {
+          const header = document.querySelector("header")
+          header.classList.toggle("scrolling", window.scrollY > 0)
+        })
+</script>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed('#typed', {
+        strings: ['Fullstack Developer.','Hydrologist.',],
+        loop: true,
+        typeSpeed: 75,
+        shuffle: true
+        });
+    </script>
     </body>
 </html>
